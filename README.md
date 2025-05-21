@@ -5,8 +5,12 @@ A VHDL program to calculate euclidean distance of a set of X, Y, Z points
 
 * hw 
   1. distance_v2.vhdl
-  1. sqrtROM.vhd
-  1. sqrt
+  1. sqrtROM.vhdl
+* python
+  1. gen-sqrtROM.py
+  1. sqrtROM.txt
+* sim
+  1. tb.vhdl
 
 ## Distance_v2.vhdl
 
