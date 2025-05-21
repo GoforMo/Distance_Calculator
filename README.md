@@ -39,12 +39,12 @@ Z2 = 7, X1 = 4 => $(Z2 - Z1)^2 = (3)^2 = 9$ <br>
 $Distance = \sqrt{(X2-X1)^2 + (Y2-Y1)^2 + (Z2 - Z1)^2} = \sqrt{144 + 729 + 9} = \sqrt{882} \approx 30$
 
 Please refer to "882" in row sqRoot[8:0] in Figure 2 and its corresponding square root displayed as 30 in row dataOut[4:0] in Figure 1. Note the numbers shown are unsigned for 5 bits and the full result in shown in 2 dataOut bus changes. 
-<figure style="text-align: center;">
+<figure align="center">
   <img src="images/sim_timing_diagram.jpg" alt="Alt text" />
   <figcaption>Figure 1: Simulation timing diagram (Part 1)</figcaption>
 </figure>
 
-<figure style="text-align: center;">
+<figure align="center">
   <img src="images/sim_timing_diagram_pt2.jpg" alt="Alt text" />
   <figcaption>Figure 2: Simulation timing diagram (Part 2). Continuation of previous diagram. There is some overlap. </figcaption>
 </figure>
