@@ -1,10 +1,10 @@
 # Distance_Calculator
-A VHDL program to calculate euclidean distance of a set of X, Y, Z points
+A VHDL program to calculate euclidean distance of a set of X, Y, Z points. The project was tried on the Zedboard but there was a bitgen error with the pins and is not resolved. The program was run on Vivado 2023.2. Python code is used to generate a text file for the square root ROM module.
 
 # Folders
 
 * hw 
-  1. distance_v2.vhdl
+  1. Distance_v2.vhdl
   1. sqrtROM.vhdl
 * python
   1. gen-sqrtROM.py
@@ -12,7 +12,7 @@ A VHDL program to calculate euclidean distance of a set of X, Y, Z points
 * sim
   1. tb.vhdl
 
-## Distance_v2.vhdl
+## Distance_v2.vhdl Entity
 
 ``` vhdl
 entity Distance_v2 is
@@ -27,14 +27,15 @@ entity Distance_v2 is
 end Distance_v2;
 ```
 
-Entity of the main module is shown above. It receives 3 coordinates, 8 bits each, 
+Entity of the main module is shown above. It receives 3 coordinates, 8 bits each for a total of 24 bits. The result is  
 
+## Simulation Results
 <figure style="text-align: center;">
-  <img src="sim_timing_diagram.jpg" alt="Alt text" />
+  <img src="images/sim_timing_diagram.jpg" alt="Alt text" />
   <figcaption>Figure 1: Simulation timing diagram (Part 1)</figcaption>
 </figure>
 
 <figure style="text-align: center;">
-  <img src="sim_timing_diagram_pt2.jpg" alt="Alt text" />
-  <figcaption>Figure 2: Simulation timing diagram (Part 2)</figcaption>
+  <img src="images/sim_timing_diagram_pt2.jpg" alt="Alt text" />
+  <figcaption>Figure 2: Simulation timing diagram (Part 2). Continuation of previous diagram. There is some overlap. </figcaption>
 </figure>

@@ -1,6 +1,6 @@
 
 -- Company: 
--- Engineer: 
+-- Engineer: mowly k 
 -- 
 -- Create Date: 08/14/2024 03:36:36 PM
 -- Design Name: 
@@ -146,21 +146,6 @@ begin
         end if;
     end process;
 
-   -- Pre Result Stage, where only first part of the result is sent to the output (Most Significant 5 bits)
-
---    RESULT_COMB: process(all)
---    begin
---        if res_pos = '1' then
---            dataOut <= (others => '0');
---        else
---            if(res_pre = '1') then
---                DataOut     <= out_reg(4 downto 0);
---            else 
---                DataOut     <= out_reg(8 downto 4); --& "0"; 
---            end if;
---        end if;
---    end process;
-
     RESULT_COMB: process(all)
     begin
         if (res_pre = '0') then
@@ -193,28 +178,6 @@ begin
         end if;           
     end process;
     
---    process(CLK)
---    begin
---        if (CLK'event and CLK = '1') then
---            if(res_pos = '1') then
---                strobeOut <= strobe_out;
---                busy <= busy_out;
---            end if;
---        end if;
---    end process;
-
-    -- Post Result Stage, where only second part of the result is sent to the output (least 4 bits)
-    -- Note: Extra '0' bit is added at the end, thing the bandwidth of the 
-    -- ouput is 5 bits (and the real output is 9 bits in 2 c.c.)
-
---    RESULT_pos: process(CLK,res_pos)
---    begin
---        if(CLK'Event and CLK ='0') then
---            if(res_pos ='1') then
---                DataOut <= out_reg(8 downto 4); --& "0";
---            end if;
---        end if;
---    end process;   
     
     FSM_SYNC: process(CLK, reset,strobe_in_internal)
     begin
