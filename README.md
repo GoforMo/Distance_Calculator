@@ -30,6 +30,15 @@ end Distance_v2;
 Entity of the main module is shown above. It receives 3 coordinates, 8 bits each for a total of 24 bits. The result is  
 
 ## Simulation Results
+
+For example: <br>
+X2 = -8, X1 = 4 => $(X2 - X1)^2 = (-12)^2 = 144$ <br>
+Y2 = -18, Y1 = 9 => $(Y2 - Y1)^2 = (-27)^2 = 729$ <br>
+Z2 = 7, X1 = 4 => $(Z2 - Z1)^2 = (3)^2 = 9$ <br>
+
+$Distance = \sqrt{(X2-X1)^2 + (Y2-Y1)^2 + (Z2 - Z1)^2} = \sqrt{144 + 729 + 9} = \sqrt{829} \approx 30$
+
+Please refer to "882" in row sqRoot[8:0] in Figure 2 and its corresponding square root displayed as 30 in row dataOut[4:0] in Figure 1. Note the numbers shown are unsigned for 5 bits and the full result in shown in 2 dataOut bus changes. 
 <figure style="text-align: center;">
   <img src="images/sim_timing_diagram.jpg" alt="Alt text" />
   <figcaption>Figure 1: Simulation timing diagram (Part 1)</figcaption>
